@@ -1,0 +1,89 @@
+html,body{
+  margin:0px;
+  padding:0px;
+  background-color:#000;
+}
+#container{
+  max-width:1600px;
+  margin:0 auto;
+  min-height:800px;
+  padding:0px;
+  position:relative;
+  .github{
+    position:absolute;
+    top:10px;
+    right:10px;
+  }
+  .random{
+    position:absolute;
+    top:10px;
+    left:10px;
+  }
+}
+
+.icon-github{
+  background:image-url('icon-github.png') transparent;
+  width:image-width('icon-github.png');
+  height:image-height('icon-github.png');
+  text-indent:-9999px;
+  display:inline-block;
+  padding:0px;
+  margin:0px;
+}
+
+.icon-random{
+  background:image-url('icon-random.png') transparent;
+  width:image-width('icon-random.png');
+  height:image-height('icon-random.png');
+  text-indent:-9999px;
+  display:inline-block;
+  padding:0px;
+  margin:0px;
+}
+
+.button{
+  border-radius:10px;
+  background-color:#f4f4f4;
+  border:1px solid #333;
+  padding:5px;
+  display:inline-block;
+  a{
+    color:#333;
+  }
+  &:hover{
+    background-color:#fff;
+    a{
+      text-decoration:none;
+    }
+  }
+  &.active{
+    background-color:#D8E482;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  #main{
+    padding:20px;
+  }
+  #container{
+    margin:2% auto;
+    box-shadow:#39494B 0px -10px 80px;
+    border-radius:40px;
+    .github{
+      top:20px;
+      right:20px;
+    }
+    .random{
+      position:absolute;
+      top:20px;
+      left:20px;
+    }
+    .collection-pagination.top{
+      display:block;
+      .pagination{
+        margin-top:0px;
+      }
+    } 
+    
+  }
+}

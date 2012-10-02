@@ -1,0 +1,22 @@
+%head
+  %meta{ :charset => "utf-8" }/
+  %meta{ 'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge,chrome=1' }/
+
+  %title Photo Wall
+  
+  %meta{ :name => "description", :content => "" }/
+  %meta{ :name => "viewport", :content => "width=device-width" }/
+  %meta{ :name => 'author', :content => 'Blake Hilscher, blake@hilscher.ca' }
+  
+  = stylesheet_link_tag    "application", :media => "all"
+  = javascript_include_tag "application"
+  = csrf_meta_tag
+  
+  -# asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
+  -# Looks for google_account_id first in ENV['GOOGLE_ACCOUNT_ID'] then in config/html5_rails.yml
+  - if !google_account_id.blank?
+    :javascript
+      var _gaq=[['_setAccount','#{ google_account_id }'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));

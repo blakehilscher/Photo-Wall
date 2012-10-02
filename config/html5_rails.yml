@@ -1,0 +1,26 @@
+# This file stores config values that html5-rails uses
+# to render various code blocks and features.
+# (i.e. Google Analytics)
+#
+# Leaving a value blank will result in that code block
+# or feature not rendering.
+#
+# You can also define any key/value pair in you ENV and
+# it will take precidence over the yml value.
+# e.g. ENV['google_account_id'] || yml[:google_account_id]
+
+defaults: &defaults
+  :google_account_id: ""  # Google Analytics
+  :google_api_key:    ""  # Google APIs
+  
+:development:
+  <<: *defaults
+
+:test:
+  <<: *defaults
+
+:staging:
+  <<: *defaults
+
+:production:
+  <<: *defaults

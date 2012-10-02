@@ -1,0 +1,10 @@
+!!! 5
+- html_tag :lang => "en" do
+  = render "application/head"
+  %body
+    #container
+      = render "application/header"
+      
+      #main{:role => "main"}= yield
+      
+      = render "application/footer"

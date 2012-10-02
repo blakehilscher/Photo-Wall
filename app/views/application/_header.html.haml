@@ -1,0 +1,8 @@
+#header
+  .button.github
+    .icon-github
+    = link_to "Fork on Github", "https://github.com/blakehilscher/Photo-Wall"
+  
+  .button.random{:class => "#{'active' if params[:seed]}"}
+    %i.icon-random
+    = link_to 'Random', random_photos_path(rand_seed)
